@@ -1,0 +1,159 @@
+<html>
+
+<head>
+	<link rel="stylesheet"  href = "main.css">
+	<script src="JScript.js"></script>
+	<title>Rich Text Editor</title>
+	
+</head>
+
+<body>
+
+	<div id = "FuncBar">
+		
+		<!--font size --> 
+		<input typ= "button" id="FontFamily"></input>
+		<input typ= "button" id="FontSize"></input>
+		
+		<!--font style: bold italic -->
+		<ul id ="FontStyleBar"></ul>
+		
+		<!--font color -->
+		<div id = "FontColor"></div>
+		
+		<input id= "commandBtn" type = "button" value = "Bold"></input>
+	</div>
+	
+	<div id = "EditorDisplay" class="EditorBody"></div>
+	<!--
+		<iframe id="EditorFrame" src="blank.html"></iframe>
+	-->
+	
+	<script>
+		//document.designMode = "on";
+		
+		var Editor = new RichEditor("EditorDisplay");
+		
+		var btn = document.getElementById("commandBtn");
+		btn.onclick = function(){
+			document.execCommand("bold");
+		}
+		
+		var FontFamily = new DropBox("FontFamily","fontName","Calibri",
+			[
+				{
+					name: "Calibri",
+					value: "Calibri"
+				},
+				{
+					name: "Tahoma",
+					value: "Tahoma"
+				},
+				{
+					name: "Arial",
+					value: "Arial"
+				},
+				
+				{
+					name: "Times New Roman",
+					value: "Times New Roman"
+				},
+				{
+					name: "Century",
+					value: "Century"
+				}
+			]
+		);
+		var FontSize = new DropBox("FontSize","fontSize",13,
+			[
+				{
+					name: "10",
+					value: 1
+				},
+				{
+					name: "13",
+					value: 2
+				},
+				{
+					name: "16",
+					value: 3
+				},
+				{
+					name: "18",
+					value: 4
+				},
+				{
+					name: "24",
+					value: 5
+				},
+				{
+					name: "32",
+					value: 6
+				},
+				{
+					name: "50",
+					value: 7
+				}
+			
+			]
+		);
+		
+		
+		var FontBold = new FuncButton("FontStyleBar","B","bold");
+		var FontItalic = new FuncButton("FontStyleBar","I","italic");
+		var FontUnderLine = new FuncButton("FontStyleBar","U","underLine");
+		
+		var FontColor = new ColorSelector("FontColor","foreColor",
+			{
+				name: "Black",
+				value: "#000"
+			},
+			[
+				{
+					name: "Black",
+					value: "#000"
+				},
+				{
+					name: "DarkGray",
+					value: "#333"
+				},
+				{
+					name: "Gray",
+					value: "#666"
+				},
+				{
+					name: "LightGray",
+					value: "#999"
+				},
+				{
+					name: "LightGray2",
+					value: "#f0f0f0"
+				},
+				{
+					name: "Red",
+					value: "#ff5050"
+				},
+				{
+					name: "Orange",
+					value: "#ff9933"
+				},
+				{
+					name: "Green",
+					value: "#92cd50"
+				},
+				{
+					name: "Blue",
+					value: "#000080"
+				},
+				{
+					name: "Purple",
+					value: "#9966ff"
+				}
+			]
+		);
+		
+		
+	</script>
+</body>
+
+</html>

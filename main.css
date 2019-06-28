@@ -1,0 +1,220 @@
+body{
+	font-family:"Tahoma", "Calibri", "Arial";
+	font-size:12px;
+	margin:0;
+}
+
+ul{
+	list-style:none;
+	display: block;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+ul li{
+	display:block;
+}
+
+
+
+/*--General Style--*/
+.HighLightOn{
+	background-color:#ccecff!important;
+	cursor:pointer!important;
+}
+
+.DropList {
+	display: inline-block;
+	position: absolute;
+	background-color: #fff;
+	border:1px solid #ccc; 
+	float:left; 
+	
+	margin-top:30px;
+}
+
+
+.DropList li{
+	display: block;
+	clear:both;
+	font-family:"calibri";
+	line-height:25px;
+	padding:0px 10px;
+	font-size:14px;
+}
+
+
+
+.DropButton{
+	display: inline-block; 
+	float:left;
+	font-family:"calibri";
+	line-height:25px;
+	height:25px;
+	padding:0px 10px;
+	font-size:14px;
+	border:1px solid #ccc;
+	
+	background:#fff;
+	margin-top:2px;
+}
+.DropButton:hover{
+	background:#ccecff;
+	cursor:hand;
+}
+
+
+.FuncButtonBar{ 
+	display: inline-block; 
+}
+
+.FuncButtonBar .on{
+	border: 1px solid #ccc;
+	background-color:#f8f8f8; /*#ccecff; */ 
+	cursor:pointer;
+}
+
+
+.FuncButtonBar input{
+	border: 1px solid #ccc;
+	width:25px; 
+	font-size:11pt;
+	line-height:25px;
+	height:25px;
+	text-align:center; 
+	background-color:#eee;
+	font-family:"Times New Roman";
+	float:left;
+	margin-left:3px;
+	color:#333;
+	padding: 0;
+}
+
+
+
+/*-- Font family  --*/
+
+
+#FontFamily{
+	margin-left:0px;
+	min-width:140px;
+}
+
+
+/*--Font size --*/
+
+#FontSize{
+	margin-left:5px; 
+	width:60px;
+}
+		
+
+/*--Font style --*/ 
+#FontStyleBar{
+	margin-left:5px;
+}
+
+#FontStyleBar .bold{
+	font-weight:bold;
+}
+
+#FontStyleBar .italic{
+	font-style: italic;
+}
+
+#FontStyleBar .underLine{
+	text-decoration:underline;
+}
+
+
+/*--Font color --*/  
+#FontColor{ 
+	display: inline-block; 
+	margin-left:5px;
+	background-color:#fff; 
+	border:1px solid #ccc;
+	height:25px;
+	width:50px;
+}
+
+
+.ColorPane li{
+	float:left;  
+	list-style:none; 
+	line-height:25px; 
+	margin-right:5px;
+	
+	font-family:"Times New Roman";
+	text-decoration:underline; 
+	font-size:14px;
+	color:#333;
+}
+
+
+
+.ColorChooser{
+	display: inline-block;
+	position:absolute;
+	
+	min-width:100px;
+	height:50px;
+	border: 1px solid #ccc;
+	background:#fff;
+}
+
+
+.ColorChooser ul{ 
+	display: block; 
+}
+
+.ColorChooser li{
+	border: 1px solid #fff;
+	width:14px;
+	height:14px;
+	
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+	
+}
+
+
+
+.ColorChooser .on{
+	border:1px solid #ff0000; 
+}
+
+
+.ColorPane .FontColorIcon{
+	border: 1px solid #fff;
+	width:14px;
+	height:14px;
+	
+	margin-left:5px;
+	margin-top:5px; 
+}
+
+
+
+#FuncBar{
+	display:block;
+	clear:both; 
+	overflow:hidden;
+	
+	padding:10px;
+}
+
+
+.EditorBody{
+	border:1px solid #eee;
+	height:200px;
+	padding:8px;
+	
+	overflow-y:scroll;
+}
+
+.EditorBody::selection{
+	background-color:#ccc;
+	color:#fff;
+} 
